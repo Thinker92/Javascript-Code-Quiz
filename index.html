@@ -5,29 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Code Quiz</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
-  <body>
-    <div id="navBar">
-      <div id="scoreLinks">
+  <body class="is-flex is-flex-direction-column">
+    <div id="navBar" class="is-flex is-justify-content-space-around my-4">
+      <div id="scoreLinks" class="is-one-third">
         <a href="" id="viewScores">View High Scores</a>
         <a href="" id="clearScores">Clear High Scores</a>
       </div>
 
-      <div id="timerContiner">
+      <div id="timerContiner" class="is-one-third">
         <h2 id="timerValue">0</h2>
       </div>
     </div>
 
-    <div id="main">
-      <h1 id="mainTitle">Web Development Coding Quiz</h1>
-      <p id="mainText">
+    <div
+      id="main"
+      class="is-flex is-align-items-center is-flex-direction-column my-6 px-6"
+    >
+      <h1 id="mainTitle" class="my-4 is-size-3">Web Development Coding Quiz</h1>
+      <p id="mainText" class="my-3 is-size-6s">
         Shoot for the leaderboard in this web development coding quiz! Answer
         all of the questions within the time limit and remember, wrong answer
         will subtract from your final score!
       </p>
-      <button id="startBtn">Start Quiz</button>
+      <button id="startBtn" class="mt-5">Start Quiz</button>
     </div>
 
     <script src="./assets/js/script.js"></script>
