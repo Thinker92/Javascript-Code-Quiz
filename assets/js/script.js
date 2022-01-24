@@ -1,4 +1,6 @@
 // Decalring DOM elements
+var viewHighScoreLink = document.querySelectore("#viewScores");
+
 
 // Event listner for start button
 
