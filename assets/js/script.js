@@ -1,3 +1,7 @@
+// Decalring DOM elements
+var viewHighScoreLink = document.querySelectore("#viewScores");
+
+
 // Event listner for start button
 
 // Start function: clears main div and displays question and 4 answers from array, starts timer countdown
