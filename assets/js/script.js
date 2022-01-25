@@ -2,6 +2,14 @@
 var viewHighScoreLink = document.querySelector("#viewScores");
 var clearHighScoreLink = document.querySelector("#clearScores");
 var startBtn = document.querySelector("#startBtn");
+var mainEl = document.querySelector("#main")
+var mainTitle = document.querySelector("#mainTitle");
+var mainText = document.querySelector("#mainText");
+var timerVal = document.querySelector("timerValue")
+
+
+var questionArray = ["Question 1","Question 2","Question 3","Question 4","Question 5","Question 6","Question 7","Question 8","Question 9","Question 10",];
+
 
 // Start function: clears main div and displays question and 4 answers from array, starts timer countdown
 
@@ -22,8 +30,15 @@ function clearScores() {
 }
 function startQuiz() {
 	event.preventDefault();
-	alert("Clicked!");
+	
+	// for (var i = 0; i < questionArray.length; i++){
+	mainTitle.textContent = questionArray[0]
+	mainText.textContent = "Answer 1";
+	// }
+	
+	
 }
+
 
 // Event listners
 viewHighScoreLink.addEventListener("click", viewScores);
