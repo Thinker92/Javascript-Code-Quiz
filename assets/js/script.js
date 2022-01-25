@@ -2,6 +2,9 @@
 var viewHighScoreLink = document.querySelector("#viewScores");
 var clearHighScoreLink = document.querySelector("#clearScores");
 var startBtn = document.querySelector("#startBtn");
+var mainTitle = document.querySelector("#mainTitle");
+var mainText = document.querySelector("#mainText");
+
 
 // Start function: clears main div and displays question and 4 answers from array, starts timer countdown
 
@@ -23,7 +26,11 @@ function clearScores() {
 function startQuiz() {
 	event.preventDefault();
 	alert("Clicked!");
+	mainText.innerHTML = "You just clicked the button";
+	
+	
 }
+
 
 // Event listners
 viewHighScoreLink.addEventListener("click", viewScores);
