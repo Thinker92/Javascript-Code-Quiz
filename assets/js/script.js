@@ -1,8 +1,7 @@
 // Decalring DOM elements
-var viewHighScoreLink = document.querySelectore("#viewScores");
-
-
-// Event listner for start button
+var viewHighScoreLink = document.querySelector("#viewScores");
+var clearHighScoreLink = document.querySelector("#clearScores");
+var startBtn = document.querySelector("#startBtn");
 
 // Start function: clears main div and displays question and 4 answers from array, starts timer countdown
 
@@ -11,4 +10,24 @@ var viewHighScoreLink = document.querySelectore("#viewScores");
 
 // After final question, display quiz finished, score, add input for initials + Save Score button
 
-// Display High score list, clear scores button, retake quiz button
+// Display High score list, clear scores button, start quiz button
+function viewScores() {
+	event.preventDefault();
+	alert("Clicked!");
+}
+
+function clearScores() {
+	event.preventDefault();
+	alert("Clicked!");
+}
+function startQuiz() {
+	event.preventDefault();
+	alert("Clicked!");
+}
+
+// Event listners
+viewHighScoreLink.addEventListener("click", viewScores);
+
+clearHighScoreLink.addEventListener("click", clearScores);
+
+startBtn.addEventListener("click", startQuiz);
