@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
-  <body class="is-flex is-flex-direction-column has-text-info">
+  <body class="has-text-info">
     <div id="navBar" class="is-flex is-justify-content-space-around my-4">
       <div
         id="scoreLinks"
@@ -23,7 +23,7 @@
       </div>
 
       <div id="timerContiner" class="is-one-third">
-        <h2>Timer: <span class="timerValue">0</span></h2>
+        <h2>Timer: <span id="timerValue">0</span></h2>
       </div>
     </div>
 
@@ -37,9 +37,13 @@
         all of the questions within the time limit and remember, wrong answers
         will subtract from your final score!
       </p>
-      <button id="startBtn" class="mt-5 is-size-4">Start Quiz</button>
+      <button
+        id="startBtn"
+        class="button is-medium is-responsive is-info is-light"
+      >
+        Start Quiz
+      </button>
+      <script src="./assets/js/script.js"></script>
     </div>
-
-    <script src="./assets/js/script.js"></script>
   </body>
 </html>
