@@ -17,28 +17,34 @@ clearHighScoreLink.addEventListener("click", clearScores);
 
 startBtn.addEventListener("click", startQuiz);
 var questionIndex = 0;
-function reply_click(clicked_id) {
+function ansClicked(clicked_id) {
   console.log(clicked_id);
+  if (clicked_id == dataArray[questionIndex].correctAnswer) {
+    console.log("Correct")
+  } else {
+    console.log("Incorrect")
+  }
 }
+
 
 var dataArray = [
   {
-    question: "How many 345?",
+    question: "How many 1?",
     answers: ["A: 345", "B: 456", "C: 567", "D: 678"],
     correctAnswer: 1,
   },
   {
-    question: "How many 345?",
+    question: "How many 2?",
     answers: ["A: 345", "B: 456", "C: 567", "D: 678"],
-    correctAnswer: 1,
+    correctAnswer: 0,
   },
   {
-    question: "How many 345?",
+    question: "How many 3?",
     answers: ["A: 345", "B: 456", "C: 567", "D: 678"],
-    correctAnswer: 1,
+    correctAnswer: 2,
   },
   {
-    question: "How many 345?",
+    question: "How many 4?",
     answers: ["A: 345", "B: 456", "C: 567", "D: 678"],
     correctAnswer: 1,
   },
@@ -60,6 +66,7 @@ function startQuiz() {
   event.preventDefault();
   mainEl.remove();
   timerEL.textContent = timer;
+  
 
   var questionsEl = document.createElement("div");
   questionsEl.setAttribute("id", "questions");
@@ -81,7 +88,7 @@ function startQuiz() {
   var ans = document.createElement("button");
   ans.setAttribute("id", `${i}`);
   ans.setAttribute("class", "button is-medium is-responsive is-info is-light ");
-  ans.setAttribute("onClick", "reply_click(this.id)")
+  ans.setAttribute("onClick", "ansClicked(this.id)")
   ans.textContent = dataArray[questionIndex].answers[i];
   console.log(ans.textContent);
   answersEl.appendChild(ans);
@@ -108,8 +115,10 @@ function startQuiz() {
   questionsEl.appendChild(questionText);
   questionsEl.appendChild(answersEl);
   body.appendChild(questionsEl);
+
  
 }
+
 
 // After answer, start timer and display next question
 
